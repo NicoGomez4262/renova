@@ -1,0 +1,146 @@
+@import 'tailwindcss';
+
+/*
+ * ─────────────────────────────────────────────────────────────
+ *  RENOVA · Design tokens
+ *  Fuente de verdad del diseño. NO usar colores hex sueltos en
+ *  los componentes: usa estas clases (bg-navy-900, text-coral-500,
+ *  bg-tile-sky, text-accent-sky, font-display, etc.).
+ *  Ver docs/03-diseno.md
+ * ─────────────────────────────────────────────────────────────
+ */
+@theme {
+  /* Tipografías */
+  --font-sans:
+    'Nunito Sans Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+
+  /* Azul marino de marca (logo, títulos, navegación activa) */
+  --color-navy-50: #eef3f8;
+  --color-navy-100: #d9e4ef;
+  --color-navy-200: #b3c8dd;
+  --color-navy-300: #7f9fbf;
+  --color-navy-400: #4f7398;
+  --color-navy-500: #2c5279;
+  --color-navy-600: #1e3f61;
+  --color-navy-700: #17324e;
+  --color-navy-800: #11273d;
+  --color-navy-900: #0b1d2e;
+
+  /* Coral de marca (acción principal, precios, acentos) */
+  --color-coral-50: #fef1ec;
+  --color-coral-100: #fddfd4;
+  --color-coral-200: #fabba6;
+  --color-coral-300: #f6957a;
+  --color-coral-400: #f2744f;
+  --color-coral-500: #ee5a36;
+  --color-coral-600: #da4424;
+  --color-coral-700: #b5351b;
+
+  /* Neutros */
+  --color-ink: #0b1d2e; /* texto principal */
+  --color-muted: #667585; /* texto secundario */
+  --color-line: #e5e9ef; /* bordes */
+  --color-surface: #f6f7f9; /* fondos suaves */
+
+  /* Fondos pastel de los mosaicos de categoría (tile) + color de su ícono (accent) */
+  --color-tile-sky: #eaf2fc;
+  --color-accent-sky: #22589a;
+  --color-tile-mint: #e6f4ed;
+  --color-accent-mint: #1d7350;
+  --color-tile-peach: #fdeee6;
+  --color-accent-peach: #ee5a36;
+  --color-tile-butter: #fef5dc;
+  --color-accent-butter: #e09a0b;
+  --color-tile-lilac: #f0edfb;
+  --color-accent-lilac: #5f4bc0;
+  --color-tile-teal: #e3f4f4;
+  --color-accent-teal: #16807f;
+
+  /* Estados */
+  --color-success: #1d7350;
+  --color-success-bg: #e6f4ed;
+  --color-warning: #b26a00;
+  --color-warning-bg: #fff4dc;
+  --color-danger: #c53030;
+  --color-danger-bg: #fdecec;
+  --color-info: #22589a;
+  --color-info-bg: #eaf2fc;
+
+  /* Sombras */
+  --shadow-card: 0 1px 2px rgb(11 29 46 / 0.04), 0 4px 16px rgb(11 29 46 / 0.06);
+  --shadow-float: 0 8px 28px rgb(11 29 46 / 0.14);
+
+  /* Animaciones */
+  --animate-fade-in: fade-in 180ms ease-out;
+  --animate-slide-up: slide-up 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-up {
+    from {
+      transform: translateY(16px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    min-height: 100dvh;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  /* Foco visible y accesible para teclado */
+  :focus-visible {
+    outline: 2px solid var(--color-coral-500);
+    outline-offset: 2px;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
+
+@utility font-display-tight {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+/* Espacio inferior seguro para iPhone (barra de gestos) */
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Oculta la barra de scroll en carruseles horizontales */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
