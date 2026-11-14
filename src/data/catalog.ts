@@ -48,15 +48,47 @@ export function getPopularServices(): Service[] {
   return services.filter((s) => s.popular)
 }
 
-/** Búsqueda simple, sin tildes ni mayúsculas, sobre nombre, descripción y categoría */
+/** Palabras que no aportan a la búsqueda */
+const STOPWORDS = new Set([
+  'de',
+  'del',
+  'la',
+  'las',
+  'el',
+  'los',
+  'mi',
+  'un',
+  'una',
+  'y',
+  'en',
+  'para',
+  'con',
+  'que',
+  'se',
+  'me',
+  'al',
+])
+
+/**
+ * Búsqueda sin tildes ni mayúsculas sobre nombre, descripción, lo que
+ * incluye y la categoría. Compara la raíz de cada palabra para que
+ * "pintar" encuentre "Pintura" y "destapar" encuentre "Destape".
+ * Todas las palabras deben coincidir en algún campo.
+ */
 export function searchServices(query: string): Service[] {
-  const q = normalize(query)
-  if (!q) return services
+  const words = normalize(query)
+    .split(/\s+/)
+    .filter((w) => w && !STOPWORDS.has(w))
+    .map((w) => (w.length <= 4 ? w : w.slice(0, Math.max(4, w.length - 2))))
+  if (words.length === 0) return services
   return services.filter((s) => {
     const category = getCategory(s.categoryId)
-    return [s.name, s.description, category?.name ?? '', category?.tagline ?? '']
-      .map(normalize)
-      .some((text) => text.includes(q))
+    const haystack = normalize(
+      [s.name, s.description, ...s.includes, category?.name ?? '', category?.tagline ?? ''].join(
+        ' ',
+      ),
+    )
+    return words.every((w) => haystack.includes(w))
   })
 }
 

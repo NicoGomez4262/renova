@@ -31,7 +31,7 @@ export function TechnicianCard({
       <span className="min-w-0 flex-1 text-left">
         <span className="text-ink block truncate font-extrabold">{technician.name}</span>
         <span className="text-muted block truncate text-sm">{technician.title}</span>
-        <span className="mt-1 flex items-center gap-3">
+        <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-0.5">
           <RatingInline rating={technician.rating} count={technician.reviewsCount} />
           <span className="text-muted inline-flex items-center gap-0.5 text-sm">
             <MapPin className="size-3.5" aria-hidden />
