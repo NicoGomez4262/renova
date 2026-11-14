@@ -179,7 +179,7 @@ ejemplo. Corre npm run check al terminar.
 ### B2 · Detalle de reserva (seguimiento en vivo) — Rol B · **P0** · ~2,5 h
 
 **Ruta:** `/reservas/:bookingId` · **Archivo:** `src/features/bookings/BookingDetailPage.tsx`
-**Usa:** `useBooking(id)`, `useBookings()` → `advanceStatus`, `acceptQuote`, `cancelBooking`, `rescheduleBooking` · `STATUS_META`, `CANCELLABLE` · `getService`, `getTechnician`, `getZone` · `Sheet`, `Chip`, `Badge`, `Avatar`, `StickyFooter` · `getNextDays`, `getSlotsForDay` (`@/lib/slots`).
+**Usa:** `useBooking(id)`, `useBookings()` → `advanceStatus`, `acceptQuote`, `cancelBooking`, `rescheduleBooking` · `STATUS_META`, `CANCELLABLE` · `getService`, `getTechnician`, `getZone` · `Sheet`, `Chip`, `Badge`, `Avatar`, `StickyFooter` · `getNextDays`, `getSlotsForDay` (`@/lib/slots`) · `describeAnswers` (`@/lib/answers`, respuestas legibles) · `paymentLabel` (`@/lib/payments`).
 
 **Criterios de aceptación**
 

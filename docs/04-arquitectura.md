@@ -38,6 +38,8 @@ src/
 │   ├── format.ts          formatCOP, formatDate, formatTime, formatRelative…
 │   ├── slots.ts           Días y horarios disponibles (hora exacta)
 │   ├── pricing.ts         calculatePrice (precio claro)
+│   ├── answers.ts         describeAnswers (respuestas del formulario → texto)
+│   ├── payments.ts        PAYMENT_METHODS, paymentLabel
 │   ├── tones.ts           Clases por tono pastel
 │   ├── id.ts  cn.ts
 ├── components/

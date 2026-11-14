@@ -34,8 +34,7 @@ export function OptionTile({
       className={cn(
         'flex flex-col items-center justify-center gap-2 rounded-2xl border-2 p-3 text-center transition active:scale-[0.98]',
         tone ? toneClasses[tone].tile : 'bg-white',
-        selected ? 'border-navy-700 shadow-card' : 'border-transparent',
-        !tone && !selected && 'border-line',
+        selected ? 'border-navy-700 shadow-card' : tone ? 'border-transparent' : 'border-line',
         className,
       )}
     >
