@@ -39,7 +39,8 @@ export function StarRating({
       aria-label={`${value} de 5 estrellas`}
     >
       {[1, 2, 3, 4, 5].map((n) => {
-        const filled = n <= Math.round(value)
+        // 4.5 → 4 estrellas, 4.6 → 5 (no inflar la calificación)
+        const filled = n <= Math.round(value - 0.01)
         const star = (
           <Star
             style={{ width: size, height: size }}
