@@ -1,17 +1,7 @@
 import type { ReactNode } from 'react'
-import {
-  Award,
-  Banknote,
-  CalendarClock,
-  CreditCard,
-  MapPin,
-  Pencil,
-  Smartphone,
-  Sparkles,
-  Wallet,
-} from 'lucide-react'
-import type { PaymentMethod } from '@/types'
+import { Award, CalendarClock, MapPin, Pencil, Sparkles } from 'lucide-react'
 import { Avatar, Card, OptionTile, RatingInline } from '@/components/ui'
+import { PaymentIcon } from '@/components/common'
 import { CategoryIcon } from '@/components/brand/CategoryIcon'
 import { getCategory, getTechnician } from '@/data/catalog'
 import { getZone } from '@/data/zones'
@@ -23,13 +13,6 @@ import { calculatePrice } from '@/lib/pricing'
 import { toneClasses } from '@/lib/tones'
 import { validatePayment, type StepProps } from '../draft'
 import { StepIntro } from './StepIntro'
-
-const PAYMENT_ICONS: Record<PaymentMethod, typeof CreditCard> = {
-  tarjeta: CreditCard,
-  nequi: Smartphone,
-  daviplata: Wallet,
-  efectivo: Banknote,
-}
 
 /** Paso 5 · Resumen, precio claro y pago — Tarea A4 */
 export function SummaryStep({
@@ -166,7 +149,6 @@ export function SummaryStep({
         <legend className="text-ink mb-2 text-[15px] font-bold">¿Cómo vas a pagar?</legend>
         <div className="grid grid-cols-2 gap-2.5">
           {PAYMENT_METHODS.map((m) => {
-            const Icon = PAYMENT_ICONS[m.id]
             return (
               <OptionTile
                 key={m.id}
@@ -174,7 +156,7 @@ export function SummaryStep({
                 description={m.hint}
                 selected={draft.paymentMethod === m.id}
                 onClick={() => update({ paymentMethod: m.id })}
-                icon={<Icon className="text-navy-700 size-6" aria-hidden />}
+                icon={<PaymentIcon method={m.id} className="text-navy-700 size-6" />}
                 className="min-h-24"
               />
             )

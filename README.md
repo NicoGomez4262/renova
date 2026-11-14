@@ -33,7 +33,7 @@ Piloto web (PWA, pensado para celular) de **Renova**, una app para contratar ser
 | **0 · Esqueleto**                | ✅ Proyecto, diseño, rutas, datos, Inicio | ✅                                                              |
 | **1 · Núcleo**                   | ✅ A1 Catálogo · ✅ A2 Perfil del técnico | ☐ B1 Mis reservas · ☐ B2 Detalle de reserva                     |
 | **2 · Reserva de punta a punta** | ✅ A3 + A4 Flujo de reserva               | ☐ B3 Mensajes · ☐ B4 Calificar y garantía · ☐ B5 Notificaciones |
-| **3 · Tienda y cuenta**          | ☐ A5 Tienda · ☐ A6 Carrito y checkout     | ☐ B6 Perfil e ingreso · ☐ B7 Bienvenida y Únete                 |
+| **3 · Tienda y cuenta**          | ✅ A5 Tienda · ✅ A6 Carrito y checkout   | ☐ B6 Perfil e ingreso · ☐ B7 Bienvenida y Únete                 |
 | **4 · Pulido y QA**              | ☐ A7                                      | ☐ B8                                                            |
 | **5 · Auth real** _(opcional)_   | ☐ A8                                      | ☐ B9                                                            |
 
