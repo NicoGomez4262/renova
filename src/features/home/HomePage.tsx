@@ -6,10 +6,11 @@ import { ButtonLink, SectionTitle } from '@/components/ui'
 import { CategoryTile, ServiceCard, TrustBadges } from '@/components/common'
 import { HouseIllustration } from '@/components/brand/HouseIllustration'
 import { getCategories, getPopularServices } from '@/data/catalog'
+import { FeaturedProducts, NextBookingCard, TopTechnicians } from './sections'
 
 /**
- * Inicio — implementado en Fase 0 como REFERENCIA VISUAL del sistema de diseño.
- * Rol A puede agregar secciones en la tarea A7 (ej. técnicos destacados).
+ * Inicio — referencia visual del sistema de diseño (Fase 0) + secciones
+ * de la tarea A7: próxima reserva, técnicos y materiales.
  */
 export default function HomePage() {
   const navigate = useNavigate()
@@ -60,6 +61,9 @@ export default function HomePage() {
         ))}
       </section>
 
+      {/* Próxima reserva (si hay una activa) */}
+      <NextBookingCard />
+
       {/* Banner */}
       <section className="mt-6 px-5">
         <div className="from-coral-50 relative flex min-h-56 overflow-hidden rounded-3xl bg-gradient-to-r via-[#fdf2ea] to-[#f8eadf]">
@@ -97,6 +101,9 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <TopTechnicians />
+      <FeaturedProducts />
 
       {/* Por qué Renova */}
       <section className="mt-8 px-5">

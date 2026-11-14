@@ -67,7 +67,7 @@ Cada pantalla es un archivo con `export default`. Si una pantalla crece, crea su
 
 `src/router.tsx` define tres layouts:
 
-- `RootLayout`: centra la app como columna de celular, monta los toasts y restaura el scroll.
+- `RootLayout`: centra la app como columna de celular, monta los toasts y restaura el scroll. En pantallas de 1280 px o más muestra `DesktopPanels`: la marca a la izquierda y un QR "Ábrelo en tu celular" a la derecha (para presentar desde un computador).
 - `TabsLayout`: pantallas con **barra inferior** (Inicio, Servicios, Tienda, Mensajes, Reservas, Perfil).
 - `FlowLayout`: detalle y flujos **sin barra inferior** (tienen `PageHeader` y, si aplica, `StickyFooter`).
 

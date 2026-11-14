@@ -1,5 +1,6 @@
 import { Outlet, ScrollRestoration } from 'react-router'
 import { BottomNav } from './BottomNav'
+import { DesktopPanels } from './DesktopPanels'
 import { Toaster } from '@/components/ui/Toaster'
 
 /**
@@ -12,6 +13,7 @@ export function RootLayout() {
       <div className="md:border-line md:shadow-float relative mx-auto min-h-dvh max-w-lg bg-white md:border-x">
         <Outlet />
       </div>
+      <DesktopPanels />
       <Toaster />
       <ScrollRestoration />
     </div>
