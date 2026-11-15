@@ -9,7 +9,7 @@ export function TopBar() {
   return (
     <header className="flex items-center justify-between px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-2">
       <Link to="/" aria-label="Renova, inicio">
-        <Logo size={30} />
+        <Logo size={26} />
       </Link>
       <Link
         to="/notificaciones"

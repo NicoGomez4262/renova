@@ -138,7 +138,7 @@ createBooking ─► cotizacion_pendiente ─► cotizada ─┐   createBooking
 ## PWA
 
 - Configurada en `vite.config.ts` (manifiesto, íconos en `public/icons`, service worker con actualización automática).
-- Para regenerar los íconos desde `public/favicon.svg`: `npm i -D playwright && npx playwright install chromium && node scripts/generate-icons.mjs`.
+- Para regenerar el favicon y los íconos (techo blanco sobre naranja `#FF8A00`): `npm i -D playwright && npx playwright install chromium && node scripts/generate-icons.mjs`.
 - El service worker solo funciona en el build (`npm run build && npm run preview`) o en Vercel, no en `npm run dev`.
 
 ## Fase 5 · Plan para datos y login reales (Supabase)

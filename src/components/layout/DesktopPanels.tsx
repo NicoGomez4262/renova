@@ -23,7 +23,7 @@ export function DesktopPanels() {
         aria-label="Sobre Renova"
       >
         <div className="max-w-sm">
-          <Logo size={34} />
+          <Logo size={32} />
           <p className="font-display-tight text-navy-900 mt-8 text-5xl">
             Todo lo que tu hogar necesita <span className="text-coral-500">a un clic</span>
           </p>

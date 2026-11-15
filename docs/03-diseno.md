@@ -14,17 +14,18 @@ Sacado de los mockups de Inicio y de Pintura. La pantalla de **Inicio** (`src/fe
 
 Definidos como tokens en `src/index.css` (`@theme`). **No uses colores hex sueltos**: usa las clases.
 
-| Token / clase                                    | Valor     | Uso                                                         |
-| ------------------------------------------------ | --------- | ----------------------------------------------------------- |
-| `navy-900` (`text-navy-900`, `bg-navy-900`)      | `#0b1d2e` | Logo, títulos, navegación activa, botón secundario          |
-| `navy-50 … navy-800`                             | escala    | Fondos suaves (`bg-navy-50`), bordes de foco, textos        |
-| `coral-500` (`bg-coral-500`, `text-coral-500`)   | `#ee5a36` | **Acción principal**, precios, palabra destacada del título |
-| `coral-50 … coral-700`                           | escala    | Hover (`coral-600`), fondos suaves (`coral-50`)             |
-| `ink`                                            | `#0b1d2e` | Texto principal                                             |
-| `muted`                                          | `#667585` | Texto secundario                                            |
-| `line`                                           | `#e5e9ef` | Bordes y divisores                                          |
-| `surface`                                        | `#f6f7f9` | Fondo de la página                                          |
-| `success`, `warning`, `danger`, `info` (+ `-bg`) |           | Estados y badges                                            |
+| Token / clase                                    | Valor                | Uso                                                                         |
+| ------------------------------------------------ | -------------------- | --------------------------------------------------------------------------- |
+| `navy-900` (`text-navy-900`, `bg-navy-900`)      | `#0b1d2e`            | Logo, títulos, navegación activa, botón secundario                          |
+| `navy-50 … navy-800`                             | escala               | Fondos suaves (`bg-navy-50`), bordes de foco, textos                        |
+| `coral-500` (`bg-coral-500`, `text-coral-500`)   | `#ee5a36`            | **Acción principal**, precios, palabra destacada del título                 |
+| `coral-50 … coral-700`                           | escala               | Hover (`coral-600`), fondos suaves (`coral-50`)                             |
+| `ink`                                            | `#0b1d2e`            | Texto principal                                                             |
+| `muted`                                          | `#667585`            | Texto secundario                                                            |
+| `line`                                           | `#e5e9ef`            | Bordes y divisores                                                          |
+| `surface`                                        | `#f6f7f9`            | Fondo de la página                                                          |
+| `brand-orange`, `brand-black`                    | `#ff8a00`, `#1f2020` | **Solo logo e íconos** (colores de la presentación). No usar en la interfaz |
+| `success`, `warning`, `danger`, `info` (+ `-bg`) |                      | Estados y badges                                                            |
 
 **Tonos pastel por categoría** (fondo `tile-*`, ícono `accent-*`). Usa el mapa `toneClasses` de `@/lib/tones` en vez de construir la clase dinámicamente:
 
@@ -71,7 +72,7 @@ Patrón del título con palabra coral:
 
 - Íconos de interfaz: **lucide-react** (`import { Bell } from 'lucide-react'`), tamaño `size-5` o `size-6`.
 - Ilustraciones de categoría a color: `<CategoryIcon id="pintura" size={44} />` (`@/components/brand/CategoryIcon`).
-- Logo: `<Logo size={30} />` · isotipo: `<HouseMark />` (`@/components/brand/Logo`).
+- Logo: `<Logo size={26} />` (`inverted` para fondos oscuros) · isotipo (techo con puerta): `<HouseMark color="orange" />` (`@/components/brand/Logo`). El texto del logo está en trazos vectoriales: no depende de fuentes.
 - Casa del Inicio: `<HouseIllustration />`.
 
 ## Imágenes disponibles (`public/img`)

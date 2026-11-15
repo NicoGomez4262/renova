@@ -37,6 +37,10 @@
   --color-coral-600: #da4424;
   --color-coral-700: #b5351b;
 
+  /* Marca (SOLO logo e íconos de la app): naranja y negro de la presentación */
+  --color-brand-orange: #ff8a00;
+  --color-brand-black: #1f2020;
+
   /* Neutros */
   --color-ink: #0b1d2e; /* texto principal */
   --color-muted: #667585; /* texto secundario */

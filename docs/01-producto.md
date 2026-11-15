@@ -89,7 +89,7 @@ Los 5 pasos de la propuesta, convertidos en pantallas:
 ## Referencias de diseño
 
 - Mockups de **Inicio** ("Hola, ¿qué necesita tu hogar?") y **Pintura para tu hogar** (formulario de solicitud): son la guía visual. El Inicio ya está implementado igual al mockup.
-- La presentación usa naranja y negro; **la app usa la paleta de los mockups** (azul marino + coral + pasteles). Ver [diseño](03-diseno.md).
+- La presentación usa naranja y negro; **la app usa la paleta de los mockups** (azul marino + coral + pasteles). El **logo** ("Techo": RENOV + la "A" como techo con puerta) usa solo el naranja `#FF8A00`, el negro `#1F2020` y el blanco de la presentación. Ver [diseño](03-diseno.md).
 
 ## Guion de la demo
 
