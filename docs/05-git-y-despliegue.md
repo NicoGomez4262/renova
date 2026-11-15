@@ -99,6 +99,23 @@ Desde ahí:
 
 El archivo `vercel.json` ya hace que todas las rutas (ej. `/reservas/123`) carguen la app al recargar o compartir el enlace.
 
+### Si publica el compañero (desde su computador)
+
+La conexión automática GitHub → Vercel la tiene que autorizar el dueño del repo. Si publica el compañero, lo más rápido es la línea de comandos de Vercel, desde su copia del proyecto:
+
+```bash
+git pull origin main
+npm install
+npx vercel login      # abre el navegador: entra con GitHub
+npx vercel --prod     # publica en producción
+```
+
+La primera vez, `vercel --prod` hace unas preguntas: responde **Y** a _Set up and deploy_, elige tu cuenta, **N** a _Link to existing project_, nombre `renova`, directorio `./` y **N** a _modify settings_ (detecta Vite solo). Al final muestra la **URL de producción** (`https://renova-….vercel.app`): pásala para ponerla en el README.
+
+Para publicar una versión nueva: `git pull origin main && npx vercel --prod`.
+
+> Para que se publique solo en cada push: el dueño del repo instala la app de Vercel en `renova` (https://github.com/apps/vercel/installations/new → _Only select repositories_ → `renova`) y luego, en Vercel, el proyecto se conecta en _Settings → Git_.
+
 ## Probar e instalar en el celular
 
 - **Android (Chrome):** abre la URL → menú ⋮ → **Instalar app**.
