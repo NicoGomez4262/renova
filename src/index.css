@@ -37,8 +37,8 @@
   --color-coral-600: #da4424;
   --color-coral-700: #b5351b;
 
-  /* Marca (SOLO logo e íconos de la app): naranja y negro de la presentación */
-  --color-brand-orange: #ff8a00;
+  /* Marca (SOLO logo e íconos): el naranja es el mismo coral-500 de la app ("tu hogar?") */
+  --color-brand-orange: #ee5a36;
   --color-brand-black: #1f2020;
 
   /* Neutros */

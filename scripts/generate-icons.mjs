@@ -1,6 +1,6 @@
 /**
  * Genera el favicon (public/favicon.svg) y los íconos PNG de la PWA
- * a partir del isotipo de Renova: techo blanco sobre naranja #FF8A00.
+ * a partir del isotipo de Renova: techo blanco sobre naranja #EE5A36 (el coral de la app).
  *
  * Uso: node scripts/generate-icons.mjs
  * (requiere Playwright: npm i -D playwright && npx playwright install chromium)
@@ -11,7 +11,7 @@ import { createRequire } from 'node:module'
 // Playwright puede estar instalado global (NODE_PATH) o local
 const { chromium } = createRequire(import.meta.url)('playwright')
 
-const ORANGE = '#FF8A00'
+const ORANGE = '#EE5A36'
 const WHITE = '#FFFFFF'
 
 // Isotipo (mismo dibujo que HouseMark en src/components/brand/Logo.tsx)

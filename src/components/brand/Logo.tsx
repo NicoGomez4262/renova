@@ -3,7 +3,7 @@ import { cn } from '@/lib/cn'
 /*
  * Logo de Renova · propuesta "Techo"
  * "RENOV" en negro + la "A" como un techo naranja con puerta.
- * Solo usa los colores de la presentación: naranja #FF8A00, negro #1F2020 y blanco
+ * Solo usa naranja #EE5A36 (el mismo coral de "tu hogar?"), negro #1F2020 y blanco
  * (tokens brand-orange / brand-black en index.css).
  * El texto está convertido a trazos (Archivo ExtraBold expandida): no depende de fuentes.
  */
